@@ -1,5 +1,8 @@
 # Python-generated files
 __pycache__/
+.pytest_cache/
+.git
+.python-version
 *.py[oc]
 build/
 dist/
@@ -7,6 +10,8 @@ wheels/
 *.egg-info
 Input_Files/
 uv.lock
+examples/
+tests/
 
 # Virtual environments
 .venv

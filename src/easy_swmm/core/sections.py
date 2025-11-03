@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class Section_Type(Enum):
     JUNCTIONS = "JUNCTIONS"
     CONDUITS = "CONDUITS"

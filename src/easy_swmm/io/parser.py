@@ -1,4 +1,4 @@
-from easy_swmm.core.sections import Core_Section
+from easy_swmm.core.sections import Section_Type, Core_Section, JunctionsSection, ConduitsSection
 from pathlib import Path
 import re
 from easy_swmm.io.model import Model
