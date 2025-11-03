@@ -11,7 +11,7 @@ wheels/
 Input_Files/
 uv.lock
 examples/
-tests/
+config.toml
 
 # Virtual environments
 .venv
