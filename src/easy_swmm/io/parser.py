@@ -1,4 +1,4 @@
-from easy_swmm.core.sections import Section_Type, Core_Section, JunctionsSection, ConduitsSection
+from easy_swmm.core.sections import Section_Type, Core_Section, Junctions, Conduits
 from pathlib import Path
 import re
 from easy_swmm.io.model import Model
@@ -47,8 +47,8 @@ class Parser:
         """Factory that maps section name → specific Section class."""
         match name:
             case "JUNCTIONS":
-                return JunctionsSection(Section_Type.JUNCTIONS, lines)
+                return Junctions(Section_Type.JUNCTIONS, lines)
             case "CONDUITS":
-                return ConduitsSection(Section_Type.CONDUITS, lines)
+                return Conduits(Section_Type.CONDUITS, lines)
             case _:
                 return Core_Section(name, lines)
