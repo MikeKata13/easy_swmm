@@ -39,12 +39,17 @@ class Section_Type(Enum):
         return temp
 
 class Core_Section:
-    def __init__(self, section_type: Section_Type | str, content: list | None = None):
+    def __init__(self, section_type: Section_Type | str, content: list | None = None, custom:bool = False):
         if isinstance(section_type, Section_Type):
             self.section_type = section_type
-        else:
+        elif not isinstance(section_type, Section_Type) and custom==True:
             self.section_type = Section_Type.custom(section_type)
+        else:
+            raise ValueError("Incorrect section in the file. Pass argument 'custom=True' to the Parser if you want a custom section")
 
+        self.name = str(section_type).upper()
+        self.headers = []
+        self.comments = []
         self.content = content or []
 
     def __repr__(self):

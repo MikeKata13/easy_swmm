@@ -1,0 +1,52 @@
+site_name: easy_swmm
+site_description: "Documentation For the easy_swmm library"
+site_author: "MikeKata"
+
+# Use Material theme for a modern look
+theme:
+  name: material
+  palette:
+    - scheme: default      # Light mode
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate        # Dark mode
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - content.code.copy    # Adds copy button like VS Code
+
+# Sidebar navigation
+nav:
+  - Home: index.md
+#  - Introduction: introduction.md
+  - Input File Sections: 
+    - Overview: sections.md
+    - Section Type: sections/section_type.md
+    - Core Section: sections/core_section.md
+
+# Enable Markdown extensions for extra features
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+# Optional: enable search plugin
+plugins:
+  - search
+
+# Custom CSS for VS Code-like theme
+extra_css:
+  - stylesheets/vscode.css

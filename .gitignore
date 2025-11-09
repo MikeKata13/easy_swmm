@@ -15,3 +15,4 @@ config.toml
 
 # Virtual environments
 .venv
+docs/.obsidian/

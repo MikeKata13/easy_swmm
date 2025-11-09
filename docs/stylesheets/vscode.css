@@ -1,0 +1,31 @@
+/* VS Code Light Theme */
+[data-md-color-scheme="default"] {
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #333333;
+}
+
+[data-md-color-scheme="default"] .highlight .hll { background-color: #ffffcc }
+[data-md-color-scheme="default"] .highlight .c { color: #008000; font-style: italic } /* Comment */
+[data-md-color-scheme="default"] .highlight .k { color: #0000ff } /* Keyword */
+[data-md-color-scheme="default"] .highlight .s { color: #a31515 } /* String */
+[data-md-color-scheme="default"] .highlight .mi { color: #098658 } /* Number */
+[data-md-color-scheme="default"] .highlight .kn { color: #0000ff } /* Keyword.Namespace */
+[data-md-color-scheme="default"] .highlight .nc { color: #267f99 } /* Name.Class */
+[data-md-color-scheme="default"] .highlight .nf { color: #795e26 } /* Name.Function */
+[data-md-color-scheme="default"] .highlight .nb { color: #795e26 } /* Name.Builtin */
+
+/* VS Code Dark Theme (Dark+) */
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: #1e1e1e;
+  --md-code-fg-color: #d4d4d4;
+}
+
+[data-md-color-scheme="slate"] .highlight .hll { background-color: #49483e }
+[data-md-color-scheme="slate"] .highlight .c { color: #6a9955; font-style: italic } /* Comment */
+[data-md-color-scheme="slate"] .highlight .k { color: #569cd6 } /* Keyword */
+[data-md-color-scheme="slate"] .highlight .s { color: #ce9178 } /* String */
+[data-md-color-scheme="slate"] .highlight .mi { color: #b5cea8 } /* Number */
+[data-md-color-scheme="slate"] .highlight .kn { color: #c586c0 } /* Keyword.Namespace */
+[data-md-color-scheme="slate"] .highlight .nc { color: #4ec9b0 } /* Name.Class */
+[data-md-color-scheme="slate"] .highlight .nf { color: #dcdcaa } /* Name.Function */
+[data-md-color-scheme="slate"] .highlight .nb { color: #dcdcaa } /* Name.Builtin */

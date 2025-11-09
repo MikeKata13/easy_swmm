@@ -1,4 +1,5 @@
 
+
 def test_section_names():
     from pathlib import Path
     import tomllib
@@ -10,8 +11,9 @@ def test_section_names():
 
     file_path = Path(config["paths"]["example3"])
     parser = Parser()              
-    model = parser.read_file(file_path)  
+    model = parser.read_file(file_path, custom_section=True)  
 
+    print(model.section_names)
     assert model.section_names, "Parser did not return any sections"
 
     names_to_check = ["TITLE", "SUBCATCHMENTS", "POLLUTANTS"]
@@ -32,7 +34,7 @@ def test_section_types():
 
     file_path = Path(config["paths"]["example3"])
     parser = Parser()              
-    model = parser.read_file(file_path)  
+    model = parser.read_file(file_path, custom_section=True)  
 
     assert model.sections, "No sections were parsed"
 
@@ -43,6 +45,7 @@ def test_custom_sections():
     from pathlib import Path
     import tomllib
     from easy_swmm.io.parser import Parser
+    import pprint
 
     config_path = Path().cwd() / "config.toml"
 
@@ -51,8 +54,10 @@ def test_custom_sections():
 
     file_path = Path(config["paths"]["example3"])
     parser = Parser()              
-    model = parser.read_file(file_path)  
+    model = parser.read_file(file_path,custom_section=True)  
     assert type(model.Junctions.content) == list
-    
-
-
+    #pprint.pp(model.Junctions.content)
+    #pprint.pp(model.Test.content)
+    model.Junctions.parse()
+    model.Test.parse()
+    pprint.pp(vars(model))
